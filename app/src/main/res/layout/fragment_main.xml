@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Mer 18 Avril"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_temperature_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="26°C"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_icon_weather_main"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_weather_main"
+            app:layout_constraintTop_toTopOf="@+id/img_icon_weather_main" />
+
+        <ImageView
+            android:id="@+id/img_icon_weather_main"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_cloud_24"
+            app:layout_constraintStart_toStartOf="@+id/tv_date_main"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_main" />
+
+        <TextView
+            android:id="@+id/tv_city_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bruxelles"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_temperature_main"
+            app:layout_constraintStart_toEndOf="@+id/tv_temperature_main"
+            app:layout_constraintTop_toTopOf="@+id/tv_temperature_main" />
+
+        <TextView
+            android:id="@+id/tv_today_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Today"
+            app:layout_constraintStart_toStartOf="@+id/tv_date_main"
+            app:layout_constraintTop_toBottomOf="@+id/img_icon_weather_main" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_today_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_main" />
+
+        <TextView
+            android:id="@+id/tv_tommorow_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tomorrow"
+            app:layout_constraintStart_toStartOf="@+id/tv_today_main"
+            app:layout_constraintTop_toBottomOf="@+id/rv_today_main" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tomorrow_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tommorow_main" />
+
+        <TextView
+            android:id="@+id/tv_no_event_today_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="No event"
+            android:textColor="#938B8B"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tommorow_main"
+            app:layout_constraintStart_toStartOf="@+id/tv_today_main"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_main" />
+
+        <TextView
+            android:id="@+id/tv_no_event_tomorrow_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="No Event"
+            android:textColor="#938B8B"
+            app:layout_constraintStart_toStartOf="@+id/tv_tommorow_main"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tommorow_main" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

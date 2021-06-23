@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NewEventFragment">
+
+    <TextView
+        android:id="@+id/tv_name_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name_new_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_new_event"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_new_event" />
+
+    <TextView
+        android:id="@+id/tv_description_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="@+id/et_name_new_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/et_name_new_fragment" />
+
+    <EditText
+        android:id="@+id/et_description_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tv_description_new_event"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_new_event" />
+
+    <TextView
+        android:id="@+id/tv_date_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="@+id/et_description_new_event"
+        app:layout_constraintTop_toBottomOf="@+id/et_description_new_event" />
+
+    <EditText
+        android:id="@+id/et_date_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintStart_toStartOf="@+id/tv_date_new_event"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_new_event" />
+
+    <TextView
+        android:id="@+id/tv_time_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Time"
+        app:layout_constraintStart_toEndOf="@+id/et_date_new_event"
+        app:layout_constraintTop_toTopOf="@+id/tv_date_new_event" />
+
+    <EditText
+        android:id="@+id/et_time_new_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:drawableEnd="@drawable/ic_baseline_access_time_24"
+        android:ems="10"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_date_new_event"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_new_event" />
+
+    <Button
+        android:id="@+id/btn_validate_new_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Add new event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_new_event" />
+</androidx.constraintlayout.widget.ConstraintLayout>
